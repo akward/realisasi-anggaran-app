@@ -1,0 +1,30 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, sans-serif; background: #f4f6f9; color: #1e293b; line-height: 1.5; }
+header { background: #0f4c81; color: #fff; padding: 1.25rem 1.5rem; text-align: center; position: relative; }
+header h1 { margin: 0 0 0.25rem; font-size: 1.5rem; }
+header p { margin: 0; opacity: 0.9; font-size: 0.95rem; }
+nav { position: absolute; top: 1rem; right: 1rem; }
+nav button { background: #fff; color: #0f4c81; border: none; padding: 0.45rem 0.9rem; margin-left: 0.4rem; border-radius: 6px; cursor: pointer; font-weight: 600; }
+nav button:hover { background: #e2e8f0; }
+.hidden { display: none !important; }
+.modal { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.55); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.modal form { background: #fff; padding: 1.5rem; border-radius: 10px; width: 90%; max-width: 380px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.modal h2 { margin-top: 0; }
+.hint { color: #64748b; font-size: 0.85rem; margin-top: -0.5rem; }
+label { display: block; margin-bottom: 0.85rem; font-size: 0.9rem; }
+input { width: 100%; padding: 0.5rem 0.6rem; margin-top: 0.3rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+button[type="submit"] { width: 100%; background: #0f4c81; color: #fff; border: none; padding: 0.7rem; border-radius: 6px; font-weight: 600; cursor: pointer; }
+button[type="submit"]:hover { background: #0b3a63; }
+.error { color: #b91c1c; font-size: 0.9rem; }
+#anggaran-form-container { max-width: 560px; margin: 1.25rem auto; padding: 1.25rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+#anggaran-form-container h2 { margin-top: 0; font-size: 1.15rem; }
+#table-container { max-width: 960px; margin: 0 auto 2rem; padding: 0 1rem; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+th, td { padding: 0.7rem 0.85rem; border-bottom: 1px solid #e2e8f0; text-align: left; font-size: 0.92rem; }
+th { background: #0f4c81; color: #fff; }
+tr:nth-child(even) { background: #f8fafc; }
+.pct-ok { color: #15803d; font-weight: 600; }
+.pct-low { color: #b45309; font-weight: 600; }
+.action-btn { background: #dc2626; color: #fff; border: none; padding: 0.3rem 0.55rem; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+.action-btn:hover { background: #b91c1c; }
+footer { text-align: center; padding: 1rem; color: #64748b; font-size: 0.85rem; }

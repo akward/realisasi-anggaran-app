@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Realisasi Anggaran</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Realisasi Anggaran</h1>
+    <p>Dashboard input & monitoring per program</p>
+    <nav>
+      <button type="button" id="login-btn">Login</button>
+      <button type="button" id="logout-btn" class="hidden">Logout</button>
+    </nav>
+  </header>
+  <main>
+    <div id="login-modal" class="modal hidden">
+      <form id="login-form">
+        <h2>Login</h2>
+        <p class="hint">Demo: admin / admin123</p>
+        <label>Username
+          <input type="text" id="login-username" required autocomplete="username" />
+        </label>
+        <label>Password
+          <input type="password" id="login-password" required autocomplete="current-password" />
+        </label>
+        <button type="submit">Masuk</button>
+        <p id="login-error" class="error hidden"></p>
+      </form>
+    </div>
+    <section id="anggaran-form-container" class="hidden">
+      <h2>Input Anggaran</h2>
+      <form id="anggaran-form">
+        <label>Unit kerja
+          <input type="text" id="unit" required placeholder="Contoh: Bidang Infrastruktur" />
+        </label>
+        <label>Program
+          <input type="text" id="program" required placeholder="Nama program" />
+        </label>
+        <label>Anggaran (Rp)
+          <input type="number" id="anggaran" required min="0" step="1" />
+        </label>
+        <label>Realisasi (Rp)
+          <input type="number" id="realisasi" required min="0" step="1" />
+        </label>
+        <label>Tahun
+          <input type="number" id="tahun" required min="2000" max="2100" value="2026" />
+        </label>
+        <button type="submit">Simpan</button>
+      </form>
+    </section>
+    <section id="table-container"></section>
+  </main>
+  <footer>
+    <p>Realisasi Anggaran · data tersimpan di browser (localStorage)</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
