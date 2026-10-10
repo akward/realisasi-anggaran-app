@@ -1,0 +1,17 @@
+-- migrasi awal neon
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  username TEXT UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL,
+  role TEXT NOT NULL DEFAULT 'operator',
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS anggaran (
+  id SERIAL PRIMARY KEY,
+  unit TEXT NOT NULL,
+  program TEXT NOT NULL,
+  anggaran BIGINT NOT NULL DEFAULT 0,
+  realisasi BIGINT NOT NULL DEFAULT 0,
+  tahun INT NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);

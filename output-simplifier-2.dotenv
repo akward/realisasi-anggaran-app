@@ -1,0 +1,1 @@
+DATABASE_URL=postgres://user:password@neon.host:5432/realisasi-anggaran-app
